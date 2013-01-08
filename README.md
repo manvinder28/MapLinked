@@ -1,4 +1,4 @@
-MapLinkedin
+MapLinked
 ===========
 
-MapLinkedin (ChattAR for LinkedIn)
+MapLinked (ChattAR for LinkedIn)

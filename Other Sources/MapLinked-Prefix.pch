@@ -1,0 +1,37 @@
+//
+// Prefix header for all source files of the 'MapLinkedIn' target in the 'MapLinkedIn' project
+//
+
+#import <Availability.h>
+#import "JSONKit.h"
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <Quickblox/Quickblox.h>
+    #import <AddressBook/AddressBook.h>
+    #import "MLLinkedInManager.h"
+    #import "MLDataManager.h"
+    #import <MapKit/MapKit.h>
+#endif
+
+
+#define IS_IPHONE ( [[[UIDevice currentDevice] model] isEqualToString:@"iPhone"] )
+
+#define IS_IPHONE_SIMULATOR ( [[[UIDevice currentDevice] model] isEqualToString:@"iPhone Simulator"] )
+
+#define IS_IPOD ( [[[UIDevice currentDevice ] model] isEqualToString:@"iPod touch"] )
+
+#define IS_HEIGHT_GTE_568 [[UIScreen mainScreen ] bounds].size.height >= 568.0f
+
+#define IS_IPHONE_GTE_568 (( IS_IPHONE || IS_IPHONE_SIMULATOR) && IS_HEIGHT_GTE_568)
+
+#define IS_IPOD_GTE_568 (( IS_IPOD || IS_IPHONE_SIMULATOR) && IS_HEIGHT_GTE_568)
+
+#define IS_IPAD ( [[[UIDevice currentDevice ] model] rangeOfString:@"iPad"].location != NSNotFound )
+
+
